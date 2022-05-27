@@ -13,9 +13,9 @@
     <div class="description"> <div class="description_title"> Description:</div> {{game.description}} </div>
 
     
-    <div class="stock"> <div class="stock_title"> Quantity: {{game.stock_quantity}}</div>
+    <div class="stock"> Quantity: {{game.stock_quantity}}
     
-    <div class="stock_low">
+    <div class="stock_level">
         {% if game.stock_quantity < 10 %}
         <i class="gg-shape-square" style="color: red; background-color: red" aria-hidden="true"></i>
         {% elif game.stock_quantity >= 10 and game.stock_quantity < 20 %}

@@ -63,6 +63,20 @@ header {
     background-color: #f7faf8;
 }
 
+.box2 {
+    border: 2px solid #1c2321;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    min-height: 150px;
+    background-color: white;
+    padding: 10px;
+    margin:20px;
+    line-height: 22px;
+    color: #1c2321;
+    background-color: #f7faf8;
+}
+
 .title {
     font-weight: bold;
     margin-top: 0.5em;
@@ -100,7 +114,7 @@ header {
     color: #1c2321;
 }
 
-.stock {
+/* .stock {
     display: flex;
     font-weight: bold;
     align-items: center;
@@ -108,20 +122,17 @@ header {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     color: #1c2321;
-}
+} */
 
-.stock_title {
-    {
+.stock {
         font-weight: bold;
         margin-top: 0.5em;
         margin-bottom: 0.5em;
-        color: #1c2321;
-    }
+        color: #1c2321; 
 }
 
 .trash-button {
     display: contents;
-    align-content: center;
 }
 
 .delete-form{
@@ -171,3 +182,17 @@ header {
     margin-bottom: 0.5em;
     color: #1c2321;
 }
+
+.new_title {
+        font-weight: bold;
+        color: #1c2321;
+}
+
+.add-button {
+    display: contents;
+}
+
+.update-button {
+    display: contents;
+}
+
