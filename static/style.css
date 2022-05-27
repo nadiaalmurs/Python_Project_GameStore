@@ -1,4 +1,5 @@
 @import url('https://fonts.google.com/specimen/Vollkorn?preview.text=Games&preview.text_type=custom');
+@import url('https://fonts.google.com/specimen/Merriweather?preview.text=Games&preview.text_type=custom');
 
 * {
     box-sizing: border-box;
@@ -49,22 +50,57 @@ header {
 }
 
 .box {
-    border: 1px solid #1c2321;
+    border: 2px solid #1c2321;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 420px;
     min-height: 200px;
     background-color: white;
     padding: 10px;
     margin:20px;
+    line-height: 22px;
+    color: #1c2321;
+    background-color: #f7faf8;
+}
+
+.title {
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.developer {
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.genre {
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.description_title {
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .stock {
     display: flex;
+    font-weight: bold;
     align-items: center;
     justify-content: space-between;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
-.stock_level {
-    
+.trash-button {
+    display: contents;
+    align-content: center;
+}
+
+.delete-form{
+    display: inline;
 }

@@ -10,10 +10,10 @@
     
     <div class="genre"> Genre: {{game.genre}}</div>
 
-    <div class="description"> Description: {{game.description}} </div>
+    <div class="description"> <div class="description_title"> Description:</div> {{game.description}} </div>
 
     
-    <div class="stock"> Quantity: {{game.stock_quantity}}</div>
+    <div class="stock"> Quantity: {{game.stock_quantity}}
     
     <div class="stock_low">
         {% if game.stock_quantity < 10 %}
@@ -23,6 +23,7 @@
         {% else %}
         <i class="gg-shape-square" style="color:green; background-color: green;" aria-hidden="true"></i>
         {% endif %}
+    </div>
     </div>
     <form class="delete-form" action = "games/{{game.id}}/delete" method = "POST">
         <button class="trash-button"><i class="gg-trash"></i></button>
