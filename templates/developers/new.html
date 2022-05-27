@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<h1>Add New Developer</h1>
-
+<div class="new_form">
+<div class="new_title"> New Developer</div>
 <form action="/developers" method="post">
     <div>
         <label for="name">Name:</label>
@@ -23,5 +23,6 @@
     <button class="add-button" type="submit"><i class="gg-add"></i></button>
 
 </form>
+</div>
 
 {% endblock %}

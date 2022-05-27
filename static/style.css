@@ -54,7 +54,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 420px;
-    min-height: 200px;
+    min-height: 150px;
     background-color: white;
     padding: 10px;
     margin:20px;
@@ -110,6 +110,15 @@ header {
     color: #1c2321;
 }
 
+.stock_title {
+    {
+        font-weight: bold;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        color: #1c2321;
+    }
+}
+
 .trash-button {
     display: contents;
     align-content: center;
@@ -117,4 +126,48 @@ header {
 
 .delete-form{
     display: inline;
+}
+
+.name {
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #1c2321;
+}
+
+.name a {
+    color: #1c2321;
+    text-decoration: none;
+}
+
+.name a:hover {
+    color: #7d98a1;
+}
+
+.shipping_price {
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #1c2321;
+}
+
+.shipping_time {
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #1c2321;
+}
+
+.buy {
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #1c2321;
+}
+
+.sell {
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #1c2321;
 }

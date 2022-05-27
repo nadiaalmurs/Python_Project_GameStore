@@ -2,15 +2,15 @@
 
 {% block content %}
 
-<h1>Add New Game</h1>
-
+<div class="box">
+    <div class="new_title"> New Game</div>
 <form action="/games" method="post">
-    <div>
+    <div class="title">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" placeholder="Title" required autofocus>
     </div>
 
-    <div>
+    <div class="developer">
         <label for="developer">Developer:</label>
         <select id="developer" name="developer_id">
             {% for developer in all_developers %}
@@ -20,33 +20,34 @@
         </select>
     </div>
 
-    <div>
+    <div class="genre">
         <label for="genre">Genre:</label>
         <input type="text" name="genre" id="genre" placeholder="Genre" required>
     </div>
 
-    <div>
+    <div class="description_title">
         <label for="description">Description:</label>
-        <textarea name="description" id="description" placeholder="This game is about ..." cols="30" rows="10"></textarea>
+        <input name="description" id="description" placeholder="Description">
     </div>
 
-    <div>
+    <div class="stock">
         <label for="stock">Quantity:</label>
-        <input type="number" name="stock" id="stock" required>
+        <input type="number" name="stock" id="stock" placeholder="Stock" required>
     </div>
 
-    <div>
+    <div class="buy">
         <label for="buy">Buying Price:</label>
-        <input type="number" name="buy" id="buy" required>
+        <input type="number" name="buy" id="buy" placeholder="Buying Price" required>
     </div>
 
-    <div>
+    <div class="sell">
         <label for="sell">Selling Price:</label>
-        <input type="number" name="sell" id="sell" required>
+        <input type="number" name="sell" id="sell" placeholder="Selling Price" required>
     </div>
 
     <button class="add-button" type="submit"><i class="gg-add"></i></button>
 
 </form>
+</div>
 
 {% endblock %}
