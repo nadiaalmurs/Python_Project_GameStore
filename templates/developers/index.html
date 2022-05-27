@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for developer in all_developers %}
+<div class="developers">
+    <div class="name"> <h3>Name:<a href="/developers/{{developer.id}}">{{developer.name}}</a></h3> </div>
+
+    <div> <h4> Shipping Price: £{{developer.shipping_price}}</h4></div>
+    
+    <div> <h4> Shipping Time: {{developer.shipping_time}} days</h4></div>
+    
+    <form class="delete-form" action = "developers/{{developer.id}}/delete" method = "POST">
+        <button class="trash-button"><i class="gg-trash"></i></button>
+    </form>
+</div>
+
+{% endfor %}
+{% endblock %}

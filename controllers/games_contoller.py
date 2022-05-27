@@ -11,3 +11,9 @@ games_blueprint = Blueprint("games", __name__)
 def games():
     games = game_repository.select_all()
     return render_template("games/index.html", all_games = games)
+
+@games_blueprint.route("/games/<id>/delete", methods=['POST'])
+def delete_game(id):
+    game_repository.delete(id)
+    return redirect("/games")
+

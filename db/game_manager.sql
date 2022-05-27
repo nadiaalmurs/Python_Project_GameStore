@@ -14,7 +14,7 @@ CREATE TABLE games (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title VARCHAR,
     genre VARCHAR,
-    description VARCHAR,
+    description TEXT,
     stock_quantity INTEGER,
     buying_price INTEGER,
     selling_price INTEGER,
