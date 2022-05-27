@@ -67,24 +67,37 @@ header {
     font-weight: bold;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    color: #1c2321;
+}
+
+.title a {
+    color: #1c2321;
+    text-decoration: none;
+}
+
+.title a:hover {
+    color: #7d98a1;
 }
 
 .developer {
     font-weight: bold;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    color: #1c2321;
 }
 
 .genre {
     font-weight: bold;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    color: #1c2321;
 }
 
 .description_title {
     font-weight: bold;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    color: #1c2321;
 }
 
 .stock {
@@ -94,6 +107,7 @@ header {
     justify-content: space-between;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    color: #1c2321;
 }
 
 .trash-button {
