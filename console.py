@@ -5,8 +5,8 @@ from models.developer import Developer
 import repositories.game_repository as game_repository
 import repositories.developer_repository as developer_repository
 
-developer_repository.delete_all()
 game_repository.delete_all()
+developer_repository.delete_all()
 
 developer1 = Developer("CapCom", 5, 3)
 developer_repository.save(developer1)

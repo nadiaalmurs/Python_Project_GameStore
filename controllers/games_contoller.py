@@ -20,17 +20,18 @@ def delete_game(id):
 @games_blueprint.route("/games/new", methods=['GET'])
 def new_game():
     games = game_repository.select_all()
-    return render_template("games/new.html", all_games = games)
+    developers = developer_repository.select_all()
+    return render_template("games/new.html", all_games = games, all_developers = developers)
 
 @games_blueprint.route("/games", methods=['POST'])
 def create_game():
     title = request.form['title']
-    developer_id = request.form['developer']
+    developer_id = request.form['developer_id']
     genre = request.form['genre']
     description = request.form['description']
     stock = request.form['stock']
     buy = request.form['buy']
-    sell = request.form['sel']
+    sell = request.form['sell']
 
     developer = developer_repository.select(developer_id)
 

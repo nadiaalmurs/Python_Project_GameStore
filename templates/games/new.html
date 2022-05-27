@@ -11,11 +11,12 @@
     <div>
         <label for="developer">Developer:</label>
         <select id="developer" name="developer_id">
-          {% for developer in all_developers %}
-            <option value="{{ developer.id }}">{{ developer.name }}</option>
-          {% endfor %}
+            {% for developer in all_developers %}
+                <option value="{{ developer.id }}">
+                {{ developer.name }}</option>
+            {% endfor %}
         </select>
-      </div>
+    </div>
 
     <div>
         <label for="genre">Genre:</label>
