@@ -46,6 +46,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(game):
-    sql = "UPDATE games SET (title, genre, description, stock_quantity, buying_price, selling_price, developer_id) = (?, ?, ?, ?, ?, ?, ?) WHERE id = ?"
-    values = [game.title, game.genre, game.description, game.stock_quantity, game.buying_price, game.selling_price, game.developer.id]
+    sql = "UPDATE games SET (title, genre, description, stock_quantity, buying_price, selling_price, developer_id) = (?, ?, ?, ?, ?, ?, ?. ?) WHERE id = ?"
+    values = [game.title, game.genre, game.description, game.stock_quantity, game.buying_price, game.selling_price, game.developer.id, game.id]
     run_sql(sql, values)

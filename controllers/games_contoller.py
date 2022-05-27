@@ -45,3 +45,24 @@ def show_game(id):
     game = game_repository.select(id)
     return render_template('games/show.html', game = game)
 
+@games_blueprint.route("/games/<id>/edit", methods=['GET'])
+def edit_game(id):
+    game = game_repository.select(id)
+    developers = developer_repository.select_all()
+    return render_template('games/edit.html', game = game, all_developers = developers)
+
+@games_blueprint.route("/games/<id>", methods=['POST'])
+def update_game(id):
+    title = request.form['title']
+    developer_id = request.form['developer_id']
+    genre = request.form['genre']
+    description = request.form['description']
+    stock = request.form['stock']
+    buy = request.form['buy']
+    sell = request.form['sell']
+    
+    developer = developer_repository.select(developer_id)
+
+    game = Game(title, genre, description, stock, buy, sell, developer, id)
+    game_repository.update(game)
+    return redirect("/games")
