@@ -1,22 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div>
-    <h3>Title: {{game.title}}</h3> 
+<div class="box">
+    <div class="title">Title: {{game.title}} </div>
     
-    <h3>Developer: {{game.developer.name}}</h3>
+    <div class="name"> Developer: {{game.developer.name}} </div>
     
-    <h3>Genre: {{game.genre}}</h3>
+    <div class="genre">Genre: {{game.genre}}</div>
 
-    <h4>Description: {{game.description}} </h4>
+    <div class="description"> Description: {{game.description}}</div>
 
-    <h4> Quantity: {{game.stock_quantity}} </h4>
+    <div class="stock"> Quantity: {{game.stock_quantity}}
+        <div class="stock_level">
+        {% if game.stock_quantity < 10 %}
+        <i class="gg-shape-square" style="color: red; background-color: red" aria-hidden="true"></i>
+        {% elif game.stock_quantity >= 10 and game.stock_quantity < 20 %}
+        <i class="gg-shape-square" style="color:yellow; background-color: yellow;" aria-hidden="true"></i>
+        {% else %}
+        <i class="gg-shape-square" style="color:green; background-color: green;" aria-hidden="true"></i>
+        {% endif %}
+    </div>
+    </div>
 
-    <h4>Buy: £{{game.buying_price}}</h4>
+    <div class="buy"> Buy: £{{game.buying_price}}</div>
 
-    <h4>Sell: £{{game.selling_price}} </h4>
+    <div class="sell"> Sell: £{{game.selling_price}}</div>
 
-    <p><a href="/games/{{game.id}}/edit">Edit</a></p>
+    <div class="edit"><a href="/games/{{game.id}}/edit">Edit</a></div>
 </div>
 
 {% endblock %}

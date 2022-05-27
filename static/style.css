@@ -1,0 +1,70 @@
+@import url('https://fonts.google.com/specimen/Vollkorn?preview.text=Games&preview.text_type=custom');
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+body {
+    background-color: #eef1ef;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Vollkorn";
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #1c2321;
+    color: #a9b4c2;
+    margin: 0%;
+    padding: 20px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.menu li a {
+    color: #a9b4c2;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #7d98a1;
+} 
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box {
+    border: 1px solid #1c2321;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    min-height: 200px;
+    background-color: white;
+    padding: 10px;
+    margin:20px;
+}
+
+.stock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stock_level {
+    
+}

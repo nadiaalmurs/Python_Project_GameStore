@@ -3,17 +3,17 @@
 {% block content %}
 
 {% for game in all_games %}
-<div class="games">
-    <div class="title"> <h3>Title:<a href="/games/{{game.id}}">{{game.title}}</a></h3> </div>
+<div class="box">
+    <div class="title"> Title: <a href="/games/{{game.id}}">{{game.title}}</a> </div>
     
-    <div class="developer"> <h3>Developer: {{game.developer.name}}</h3></div>
+    <div class="developer"> Developer: {{game.developer.name}}</div>
     
-    <div class="genre"> <h3>Genre: {{game.genre}}</h3></div>
+    <div class="genre"> Genre: {{game.genre}}</div>
 
-    <div class="description"> <h4>Description: {{game.description}} </h4></div>
+    <div class="description"> Description: {{game.description}} </div>
 
     
-    <div class="stock"> <h4> Quantity: {{game.stock_quantity}} </h4> </div>
+    <div class="stock"> Quantity: {{game.stock_quantity}}</div>
     
     <div class="stock_low">
         {% if game.stock_quantity < 10 %}
