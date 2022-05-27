@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for book in all_books %}
+<div class="games">
+    <div class="title"> <h3>Title:<a href="/games/{{game.id}}">{{book.title}}</a></h3> </div>
+
+    <div class="genre"> <h3>Genre: {{game.genre}}</h3></div>
+
+    <div class="description"> <h4>Description: {{game.description}} </h4></div>
+
+    <div class="stock"> <h4> Quantity: {{game.stock_quantity}} </h4> </div>
+
+    <div class="buy"> <h4>Buy: {{game.buying_price}}</h4></div>
+
+    <div class="sell"> <h4>Sell: {{game.selling_price}} </h4></div>
+
+    <div class="developer"> <h4>Developer: {{game.developer.name}}</h4></div>
+    
+    <!-- <form class="delete-form" action = "books/{{book.id}}/delete" method = "POST">
+        <button class="trash-button"><i class ="fa fa-trash-o fa-3x" style= "color:red" aria-hidden="true"></i></button>
+    </form> -->
+</div>
+
+{% endfor %}
+{% endblock %}
