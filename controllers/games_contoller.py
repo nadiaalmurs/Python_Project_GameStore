@@ -39,3 +39,9 @@ def create_game():
 
     game_repository.save(game)
     return redirect("/games")
+
+@games_blueprint.route("/games/<id>", methods=['GET'])
+def show_game(id):
+    game = game_repository.select(id)
+    return render_template('games/show.html', game = game)
+

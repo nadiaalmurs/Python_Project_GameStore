@@ -34,3 +34,8 @@ def create_game():
     developer_repository.save(developer)
 
     return redirect("/developers")
+
+@developers_blueprint.route("/developers/<id>", methods=['GET'])
+def show_developer(id):
+    developer = developer_repository.select(id)
+    return render_template('developers/show.html', developer = developer)

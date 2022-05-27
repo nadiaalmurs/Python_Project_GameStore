@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div>
+    <h3>Name: {{developer.name}}</h3> 
+    
+    <h4> Shipping Price: £{{developer.shipping_price}}</h4>
+        
+    <h4> Shipping Time: {{developer.shipping_time}} days</h4>
+        
+    <p><a href="/developers/{{developer.id}}/edit">Edit</a></p>
+</div>
+
+{% endblock %}

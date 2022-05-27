@@ -32,7 +32,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        developer = developer_repository.select(row['developer_id'])
+        developer = developer_repository.select(result['developer_id'])
         game = Game(result['title'], result['genre'], result['description'], result['stock_quantity'], result['buying_price'], result['selling_price'], developer, result['id'])
     return game
 

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Add New Game</h1>
+
+<form action="/games/{{game.id}}" method="post">
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Title" required autofocus>
+    </div>
+
+    <div>
+        <label for="developer">Developer:</label>
+        <select id="developer" name="developer_id">
+          {% for developers in all_developers %}
+            <option value="{{ developer.id }}"
+              {% if game.developer.id== developer.id %} selected="selected"{% endif %}>
+              {{ developer.name }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+
+    <div>
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" id="genre" placeholder="Genre" required>
+    </div>
+
+    <div>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" placeholder="This game is about ..." cols="30" rows="10"></textarea>
+    </div>
+
+    <div>
+        <label for="stock">Quantity:</label>
+        <input type="number" name="stock" id="stock" required>
+    </div>
+
+    <div>
+        <label for="buy">Buying Price:</label>
+        <input type="number" name="buy" id="buy" required>
+    </div>
+
+    <div>
+        <label for="sell">Selling Price:</label>
+        <input type="number" name="sell" id="sell" required>
+    </div>
+
+    <button type="sumbit">Add Game</button>
+
+</form>
+
+{% endblock %}
