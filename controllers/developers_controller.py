@@ -39,3 +39,20 @@ def create_game():
 def show_developer(id):
     developer = developer_repository.select(id)
     return render_template('developers/show.html', developer = developer)
+
+@developers_blueprint.route("/developers/<id>/edit", methods=['GET'])
+def edit_developer(id):
+    developer = developer_repository.select(id)
+    return render_template('developers/edit.html', developer = developer)
+
+@developers_blueprint.route("/developers/<id>", methods=['POST'])
+def update_developer(id):
+    name = request.form['name']
+    shipping_price = request.form['shipping_price']
+    shipping_time = request.form['shipping_time']
+
+    developer = Developer(name, shipping_price, shipping_time, id)
+
+    developer_repository.update(developer)
+
+    return redirect("/developers")

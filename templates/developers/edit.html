@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Add New Game</h1>
+
+<form action="/developers/{{developer.id}}" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Nitle" value="{{developer.name}}" required autofocus>
+    </div>
+
+    <div>
+        <label for="shipping_price">Shipping Price:</label>
+        <input type="number" name="shipping_price" id="shipping_price" value="{{developer.shipping_price}}" required>
+    </div>
+
+    <div>
+        <label for="shipping_time">Shipping Time:</label>
+        <input type="number" name="shipping_time" id="shipping_time" value="{{developer.shipping_time}}" required>
+    </div>
+
+    <button type="sumbit">Update Developer</button>
+
+</form>
+
+{% endblock %}
