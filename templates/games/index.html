@@ -12,12 +12,18 @@
 
     <div class="description"> <h4>Description: {{game.description}} </h4></div>
 
-    <div class="stock"> <h4> Quantity: {{game.stock_quantity}} </h4> </div>
-
-    <div class="buy"> <h4>Buy: £{{game.buying_price}}</h4></div>
-
-    <div class="sell"> <h4>Sell: £{{game.selling_price}} </h4></div>
     
+    <div class="stock"> <h4> Quantity: {{game.stock_quantity}} </h4> </div>
+    
+    <div class="stock_low">
+        {% if game.stock_quantity < 10 %}
+        <i class="gg-shape-square" style="color: red; background-color: red" aria-hidden="true"></i>
+        {% elif game.stock_quantity >= 10 and game.stock_quantity < 20 %}
+        <i class="gg-shape-square" style="color:yellow; background-color: yellow;" aria-hidden="true"></i>
+        {% else %}
+        <i class="gg-shape-square" style="color:green; background-color: green;" aria-hidden="true"></i>
+        {% endif %}
+    </div>
     <form class="delete-form" action = "games/{{game.id}}/delete" method = "POST">
         <button class="trash-button"><i class="gg-trash"></i></button>
     </form>
