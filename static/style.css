@@ -135,6 +135,10 @@ header {
     display: contents;
 }
 
+.trash-button:hover {
+    cursor: pointer;
+}
+
 .delete-form{
     display: inline;
 }
@@ -192,7 +196,14 @@ header {
     display: contents;
 }
 
+.add-button:hover {
+    cursor: pointer;
+}
+
 .update-button {
     display: contents;
 }
 
+.update-button:hover {
+    cursor: pointer;
+}
