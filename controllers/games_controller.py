@@ -1,7 +1,10 @@
+from crypt import methods
 from flask import Flask, redirect, render_template, request
+from models import developer
 from repositories import developer_repository
 from repositories import game_repository
 from models.game import Game
+from models.developer import Developer
 
 from flask import Blueprint
 
@@ -10,7 +13,9 @@ games_blueprint = Blueprint("games", __name__)
 @games_blueprint.route("/games")
 def games():
     games = game_repository.select_all()
-    return render_template("games/index.html", all_games = games)
+    genres = game_repository.get_genres()
+    developers = developer_repository.select_all()
+    return render_template("games/index.html", all_games = games, genres=genres, developers=developers)
 
 @games_blueprint.route("/games/<id>/delete", methods=['POST'])
 def delete_game(id):
@@ -66,3 +71,15 @@ def update_game(id):
     game = Game(title, genre, description, stock, buy, sell, developer, id)
     game_repository.update(game)
     return redirect("/games")
+
+@games_blueprint.route("/games/genre", methods=['POST'])
+def filter_genre():
+    genre = request.form['genre']
+    all_games = game_repository.filter_genre(genre)
+    return render_template("games/index.html", all_games= all_games, genre = genre)
+
+@games_blueprint.route("/games/developer", methods=['POST'])
+def filter_developer():
+    developer_id = request.form['developer']
+    all_games = game_repository.filter_developer(developer_id)
+    return render_template("games/index.html", all_games = all_games, developer=developer)

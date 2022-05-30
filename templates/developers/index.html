@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="container">
 {% for developer in all_developers %}
 <div class="box">
     <div class="name"> Name: <a href="/developers/{{developer.id}}">{{developer.name}}</a> </div>
@@ -16,4 +16,5 @@
 </div>
 
 {% endfor %}
+</div>
 {% endblock %}

@@ -1,3 +1,4 @@
+from unittest import result
 from db.run_sql import run_sql
 
 from models.developer import Developer
@@ -49,3 +50,38 @@ def update(game):
     sql = "UPDATE games SET (title, genre, description, stock_quantity, buying_price, selling_price, developer_id) = (?, ?, ?, ?, ?, ?, ?) WHERE id = ?"
     values = [game.title, game.genre, game.description, game.stock_quantity, game.buying_price, game.selling_price, game.developer.id, game.id]
     run_sql(sql, values)
+
+def filter_genre(genre):
+    games = []
+    sql = "SELECT * FROM games WHERE genre = ?"
+    values = [genre]
+    results = run_sql(sql, values)
+
+    for row in results:
+        developer = developer_repository.select(row['developer_id'])
+        game = Game(row['title'], row['genre'], row['description'], row['stock_quantity'], row['buying_price'], row['selling_price'], developer)
+        games.append(game)
+
+
+    return games
+
+def filter_developer(developer_id):
+    games = []
+    sql = "SELECT * FROM games WHERE developer_id = ?"
+    values = [developer_id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        developer = developer_repository.select(row['developer_id'])
+        game = Game(row['title'], row['genre'], row['description'], row['stock_quantity'], row['buying_price'], row['selling_price'], developer)
+        games.append(game)
+
+    return games
+
+def get_genres():
+    sql = "SELECT DISTINCT genre from games"
+    return run_sql(sql)
+
+def get_developers():
+    sql = "SELECT * from developers"
+    return run_sql(sql)

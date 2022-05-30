@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="container">
 <div class="box2">
 <form action="/games/{{game.id}}" method="post">
     <div class="title">
@@ -49,5 +49,6 @@
     <button class="update-button" type="submit"><i class="gg-arrow-up-o"></i></button>
 
 </form>
+</div>
 </div>
 {% endblock %}
