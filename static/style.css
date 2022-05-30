@@ -114,16 +114,6 @@ header {
     color: #1c2321;
 }
 
-/* .stock {
-    display: flex;
-    font-weight: bold;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    color: #1c2321;
-} */
-
 .stock {
         font-weight: bold;
         margin-top: 0.5em;
@@ -206,4 +196,9 @@ header {
 
 .update-button:hover {
     cursor: pointer;
+}
+
+.stock_level {
+    display: flex;
+    align-items: center;
 }

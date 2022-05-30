@@ -17,10 +17,13 @@
     
     <div class="stock_level">
         {% if game.stock_quantity < 10 %}
+        Red Alert
         <i class="gg-shape-square" style="color: red; background-color: red" aria-hidden="true"></i>
         {% elif game.stock_quantity >= 10 and game.stock_quantity < 20 %}
+        Yellow Alert
         <i class="gg-shape-square" style="color:yellow; background-color: yellow;" aria-hidden="true"></i>
         {% else %}
+        Green Alert
         <i class="gg-shape-square" style="color:green; background-color: green;" aria-hidden="true"></i>
         {% endif %}
     </div>
