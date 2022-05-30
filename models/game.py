@@ -8,3 +8,6 @@ class Game:
         self.selling_price = selling_price
         self.developer = developer
         self.id = id
+
+    def get_mark_up(self):
+        return (self.selling_price - self.buying_price)/self.buying_price * 100

@@ -18,6 +18,7 @@ CREATE TABLE games (
     stock_quantity INTEGER,
     buying_price INTEGER,
     selling_price INTEGER,
+    mark_up INTEGER,
     developer_id INTEGER NOT NULL,
         FOREIGN KEY (developer_id)
             REFERENCES developers(id)

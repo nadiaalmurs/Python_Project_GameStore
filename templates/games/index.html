@@ -54,6 +54,9 @@
         <i class="gg-shape-square" style="color:green; background-color: green;" aria-hidden="true"></i>
         {% endif %}
     </div>
+
+    <div class="mark_up"> Mark Up: {{game.get_mark_up()}}% </div>
+
     </div>
     <form class="delete-form" action = "games/{{game.id}}/delete" method = "POST">
         <button class="trash-button"><i class="gg-trash"></i></button>

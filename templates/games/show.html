@@ -27,6 +27,8 @@
 
     <div class="sell"> Sell: £{{game.selling_price}}</div>
 
+    <div class="mark_up"> Mark Up: {{game.get_mark_up()}}% </div>
+
     <div class="edit"><a href="/games/{{game.id}}/edit">Edit</a></div>
 </div>
 </div>
