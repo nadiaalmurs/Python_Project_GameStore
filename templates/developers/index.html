@@ -9,11 +9,19 @@
     <div class="shipping_price"> Shipping Price: £{{developer.shipping_price}}</div>
     
     <div class="shipping_time"> Shipping Time: {{developer.shipping_time}} days</div>
+
+    <div class="active"> Active:
+    {% if developer.active == True %}
+    <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+    {% else %}
+    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+    {% endif %}
+    </div>
     
     <form class="delete-form" action = "developers/{{developer.id}}/delete" method = "POST">
         <button class="trash-button"><i class="gg-trash"></i></button>
     </form>
-</div>
+    </div>
 
 {% endfor %}
 </div>

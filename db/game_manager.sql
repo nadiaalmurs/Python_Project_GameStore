@@ -7,7 +7,8 @@ CREATE TABLE developers (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR,
     shipping_price INT,
-    shipping_time INT
+    shipping_time INT,
+    active BOOLEAN, 
 );
 
 CREATE TABLE games (

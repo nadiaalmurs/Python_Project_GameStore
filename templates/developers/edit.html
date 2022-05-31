@@ -19,6 +19,23 @@
         <input type="number" name="shipping_time" id="shipping_time" value="{{developer.shipping_time}}" required>
     </div>
 
+    <div class="active">
+        <label for="active">Active:</label>
+        <select id="active" name="active">
+    
+          <option value="1"
+            {% if developer.active == True %} selected="selected" {% endif %}>
+            True
+          </option>
+    
+          <option value="0"
+            {% if developer.active == False %} selected="selected" {% endif %}>
+            False
+          </option>
+    
+        </select>
+      </div>
+
     <button class="update-button" type="submit"><i class="gg-arrow-up-o"></i></button>
 
 </form>

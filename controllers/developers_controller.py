@@ -19,17 +19,18 @@ def delete_developer(id):
     return redirect("/developers")
 
 @developers_blueprint.route("/developers/new", methods=['GET'])
-def new_game():
+def new_developer():
     developers = developer_repository.select_all()
     return render_template("developers/new.html", all_developers = developers)
 
 @developers_blueprint.route("/developers", methods=['POST'])
-def create_game():
+def create_developer():
     name = request.form['name']
     shipping_price = request.form['shipping_price']
     shipping_time = request.form['shipping_time']
+    active  = bool(int(request.form['active']))
 
-    developer = Developer(name, shipping_price, shipping_time)
+    developer = Developer(name, shipping_price, shipping_time, active)
 
     developer_repository.save(developer)
 
@@ -50,8 +51,9 @@ def update_developer(id):
     name = request.form['name']
     shipping_price = request.form['shipping_price']
     shipping_time = request.form['shipping_time']
+    active   = bool(int(request.form['active']))
 
-    developer = Developer(name, shipping_price, shipping_time, id)
+    developer = Developer(name, shipping_price, shipping_time, active, id)
 
     developer_repository.update(developer)
 
