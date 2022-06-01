@@ -40,6 +40,6 @@ def delete_all():
     run_sql(sql)
 
 def update(developer):
-    sql = "UPDATE developers SET (name, shipping_price, shipping_time, ative) = (?, ?, ?, ?) WHERE id = ?"
+    sql = "UPDATE developers SET (name, shipping_price, shipping_time, active) = (?, ?, ?, ?) WHERE id = ?"
     values = [developer.name, developer.shipping_price, developer.shipping_time, developer.active, developer.id]
     run_sql(sql, values)

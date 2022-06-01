@@ -8,7 +8,7 @@ CREATE TABLE developers (
     name VARCHAR,
     shipping_price INT,
     shipping_time INT,
-    active BOOLEAN, 
+    active BOOLEAN
 );
 
 CREATE TABLE games (

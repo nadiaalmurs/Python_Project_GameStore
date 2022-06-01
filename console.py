@@ -8,13 +8,13 @@ import repositories.developer_repository as developer_repository
 game_repository.delete_all()
 developer_repository.delete_all()
 
-developer1 = Developer("CapCom", 5, 3)
+developer1 = Developer("CapCom", 5, 3, True)
 developer_repository.save(developer1)
 
-developer2 = Developer("Rockstar Games", 10, 2)
+developer2 = Developer("Rockstar Games", 10, 2, True)
 developer_repository.save(developer2)
 
-developer3 = Developer("Frogwares", 8, 5)
+developer3 = Developer("Frogwares", 8, 5, True)
 developer_repository.save(developer3)
 
 game1 = Game("Resident Evil Village", "Horror", "Ethan Winters searches for his kidnapped daughter in a village filled with mutant creatures.", 25, 30, 50, developer1)
