@@ -1,4 +1,4 @@
-# Python_Project_GameStore
+# Game Store Inventory APP
 
 ### What you can do
 - See all games inventory and developers
