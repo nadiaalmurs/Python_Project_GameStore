@@ -15,7 +15,11 @@ def games():
     games = game_repository.select_all()
     genres = game_repository.get_genres()
     developers = developer_repository.select_all()
-    return render_template("games/index.html", all_games = games, genres=genres, developers=developers)
+    active_games = []
+    for game in games:
+        if game.developer.active == True:
+            active_games.append(game)
+    return render_template("games/index.html", all_games = active_games, genres=genres, developers=developers)
 
 @games_blueprint.route("/games/<id>/delete", methods=['POST'])
 def delete_game(id):
@@ -26,7 +30,11 @@ def delete_game(id):
 def new_game():
     games = game_repository.select_all()
     developers = developer_repository.select_all()
-    return render_template("games/new.html", all_games = games, all_developers = developers)
+    active_developers = []
+    for developer in developers:
+        if developer.active == True:
+            active_developers.append(developer) 
+    return render_template("games/new.html", all_games = games, all_developers = active_developers)
 
 @games_blueprint.route("/games", methods=['POST'])
 def create_game():

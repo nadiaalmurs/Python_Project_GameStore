@@ -209,3 +209,10 @@ header {
     margin-bottom: 0.5em;
     color: #1c2321;
 }
+
+.active {
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #1c2321;
+}
