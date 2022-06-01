@@ -4,6 +4,7 @@
 - See all games inventory and developers
 - See a single game/ developer
 - Create new game and developer
+- Delete games and developers
 - Edit games and developers
 - Filter by genre or developer
 - Visually see stock levels by colour code (red: stock is low order more now, yellow: stock is almost low, thinking about ordering more, green: stock is high, black: out of stock)
