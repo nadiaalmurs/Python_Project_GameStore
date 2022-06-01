@@ -12,16 +12,19 @@
     <div class="description"> Description: {{game.description}}</div>
 
     <div class="stock"> Quantity: {{game.stock_quantity}}
+    
         <div class="stock_level">
-        {% if game.stock_quantity < 10 %}
-        <i class="gg-shape-square" style="color: red; background-color: red" aria-hidden="true"></i>
-        {% elif game.stock_quantity >= 10 and game.stock_quantity < 20 %}
-        <i class="gg-shape-square" style="color:yellow; background-color: yellow;" aria-hidden="true"></i>
-        {% else %}
-        <i class="gg-shape-square" style="color:green; background-color: green;" aria-hidden="true"></i>
-        {% endif %}
-    </div>
-    </div>
+            {% if game.stock_quantity < 10 %}
+            Low Stock: 
+            <i class="gg-shape-square" style="color: red; background-color: red" aria-hidden="true"></i>
+            {% elif game.stock_quantity >= 10 and game.stock_quantity < 20 %}
+            Medium Stock:
+            <i class="gg-shape-square" style="color:yellow; background-color: yellow;" aria-hidden="true"></i>
+            {% else %}
+            High Stock:
+            <i class="gg-shape-square" style="color:green; background-color: green;" aria-hidden="true"></i>
+            {% endif %}
+        </div>
 
     <div class="buy"> Buy: £{{game.buying_price}}</div>
 
