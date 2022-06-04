@@ -15,7 +15,7 @@
 ### How to run
 In terminal, at the highest root file, write the following:
 - sqlite3 db/game_manager.db < db/game_manager.sql
-- python3 console
+- python3 console.py
 - flask run
 
 Then go to your local host in your main web browser and ta da... (http://localhost:5000/)
